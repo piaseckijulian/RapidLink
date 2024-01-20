@@ -23,7 +23,7 @@ const RootLayout = ({ children }: PropsWithChildren) => (
     }}
   >
     <html lang="en">
-      <body className={`${poppins.className} bg-zinc-900`}>
+      <body className={`${poppins.className} bg-zinc-900 pb-10`}>
         <Navbar />
         <main className="container mx-auto px-10 sm:px-20">{children}</main>
       </body>
