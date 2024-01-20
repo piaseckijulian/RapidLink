@@ -16,7 +16,7 @@ interface Props {
 
 const UrlTable = ({ urls }: Props) => {
   return (
-    <Table className="border border-white text-lg text-white">
+    <Table className="mb-10 border border-white text-lg text-white">
       <TableHeader>
         <TableRow className="hover:bg-zinc-900">
           <TableHead className="border-r text-white">Full URL</TableHead>
