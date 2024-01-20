@@ -47,9 +47,9 @@ const Form = () => {
       <Input
         type="text"
         placeholder="Enter URL"
-        {...register('fullURL')}
-        className="border-blue-700 bg-zinc-800 text-lg text-white placeholder:text-gray-200 focus-visible:outline-none focus-visible:ring-0 focus-visible:ring-offset-blue-700 md:max-w-2xl"
+        className="border-blue-700 bg-zinc-800 text-lg text-white placeholder:text-gray-200 focus-visible:outline-none focus-visible:ring-0 focus-visible:ring-offset-blue-700 md:max-w-lg"
         autoComplete="off"
+        {...register('fullURL')}
       />
 
       {errors.fullURL && (
@@ -58,7 +58,10 @@ const Form = () => {
         </p>
       )}
 
-      <Button type="submit" className="bg-blue-700 text-lg font-bold hover:bg-blue-900">
+      <Button
+        type="submit"
+        className="bg-blue-700 font-bold hover:bg-blue-900 xs:text-xl"
+      >
         Get URL
       </Button>
 
@@ -66,10 +69,9 @@ const Form = () => {
         <Link
           href={shortURL}
           target="_blank"
-          className="max-xs:text-center xs:text-2xl mt-5 text-base font-bold text-white transition duration-200 sm:text-3xl"
+          className="mt-5 text-base font-bold text-white transition duration-200 max-xs:text-center xs:text-2xl sm:text-3xl"
         >
-          {process.env.NEXT_PUBLIC_WEBSITE_URL}/
-          <span className="text-blue-500">{shortURL}</span>
+          /<span className="text-blue-500">{shortURL}</span>
         </Link>
       )}
     </form>
