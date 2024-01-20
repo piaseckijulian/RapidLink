@@ -5,7 +5,6 @@ RapidLink helps you cut your URLs rapidly and easily
 # Image
 
 <img src="./images/screenshot.png" alt="Image of RapidLink" align="center" />
-![Alt text](image.png)
 
 <br />
 
