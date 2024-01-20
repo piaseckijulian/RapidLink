@@ -20,6 +20,7 @@ const DeleteButton = ({ id }: Props) => {
         deleteURL(id);
         router.refresh();
       }}
+      aria-label="Delete URL"
     >
       <FaTrashAlt />
     </Button>

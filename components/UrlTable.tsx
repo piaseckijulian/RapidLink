@@ -39,7 +39,7 @@ const UrlTable = ({ urls }: Props) => {
               </Link>
             </TableCell>
 
-            <TableCell className="flex justify-center">
+            <TableCell className="flex items-center justify-center">
               <DeleteButton id={url.id} />
             </TableCell>
           </TableRow>
