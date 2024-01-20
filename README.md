@@ -19,7 +19,7 @@ I built this project with:
 - [React Hook Form](https://www.npmjs.com/package/react-hook-form)
 - [Zod](https://www.npmjs.com/package/zod)
 - [Prisma](https://www.npmjs.com/package/prisma)
-- [shadcn/ui](https://shadcn.com/)
+- [shadcn/ui](https://ui.shadcn.com/)
 - [Short Unique ID](https://www.npmjs.com/package/short-unique-id)
 - [React Icons](https://www.npmjs.com/package/react-icons)
 
