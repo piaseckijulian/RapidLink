@@ -34,11 +34,7 @@ const UrlTable = ({ urls }: Props) => {
             </TableCell>
 
             <TableCell className="border-r">
-              <Link
-                href={`${process.env.NEXT_PUBLIC_WEBSITE_URL}/${url.short}`}
-                className="hover:underline"
-                target="_blank"
-              >
+              <Link href={url.short} className="hover:underline" target="_blank">
                 {process.env.NEXT_PUBLIC_WEBSITE_URL}/{url.short}
               </Link>
             </TableCell>
