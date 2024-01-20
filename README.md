@@ -5,6 +5,7 @@ RapidLink helps you cut your URLs rapidly and easily
 # Image
 
 <img src="./images/screenshot.png" alt="Image of RapidLink" align="center" />
+![Alt text](image.png)
 
 <br />
 
@@ -23,4 +24,4 @@ I built this project with:
 - [Short Unique ID](https://www.npmjs.com/package/short-unique-id)
 - [React Icons](https://www.npmjs.com/package/react-icons)
 
-# [Live Demo]()
+# [Live Demo](https://julian-rapidlink.vercel.app/)
