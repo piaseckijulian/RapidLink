@@ -71,7 +71,8 @@ const Form = () => {
           target="_blank"
           className="mt-5 text-base font-bold text-white transition duration-200 max-xs:text-center xs:text-2xl sm:text-3xl"
         >
-          /<span className="text-blue-500">{shortURL}</span>
+          {process.env.NEXT_PUBLIC_WEBSITE_URL}/
+          <span className="text-blue-500">{shortURL}</span>
         </Link>
       )}
     </form>
