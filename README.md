@@ -1,4 +1,4 @@
-# RapidLink - ⭐URL Shortener
+# RapidLink - 🚀URL Shortener
 
 RapidLink helps you cut your URLs rapidly and easily
 
