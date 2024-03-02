@@ -1,8 +1,8 @@
 'use client';
 
 import { deleteURL } from '@/actions';
+import { Trash2 } from 'lucide-react';
 import { useRouter } from 'next/navigation';
-import { FaTrashAlt } from 'react-icons/fa';
 import { Button } from './ui/button';
 
 interface Props {
@@ -22,7 +22,7 @@ const DeleteButton = ({ id }: Props) => {
       }}
       aria-label="Delete URL"
     >
-      <FaTrashAlt />
+      <Trash2 />
     </Button>
   );
 };

@@ -1,26 +1,45 @@
-# RapidLink - 🚀URL Shortener
+# 🚀 RapidLink
 
-RapidLink helps you cut your URLs rapidly and easily
+![GitHub Repo stars](https://img.shields.io/github/stars/piaseckijulian/RapidLink?style=for-the-badge)
+![GitHub forks](https://img.shields.io/github/forks/piaseckijulian/RapidLink?style=for-the-badge)
+![GitHub watchers](https://img.shields.io/github/watchers/piaseckijulian/RapidLink?style=for-the-badge)
 
-# Image
+RapidLink, your go-to URL shortener, facilitates quick and easy link management with a user-friendly interface, making it the perfect solution for all your URL shortening needs. 🚀
 
-<img src="./images/screenshot.png" alt="Image of RapidLink" align="center" />
+<img src="./images/image.png" alt="Image of RapidLink" width="800" height="400" />
 
-<br />
+## 🔗 Links
 
-# About
+- [Live Demo](https://julian-rapidlink.vercel.app)
 
-I built this project with:
+## 📐 Tech Stack
 
-- [Next.js](https://www.npmjs.com/package/next)
-- [Typescript](https://www.npmjs.com/package/typescript)
-- [Tailwind CSS](https://www.npmjs.com/package/tailwindcss)
-- [Clerk](https://www.npmjs.com/package/@clerk/nextjs)
-- [React Hook Form](https://www.npmjs.com/package/react-hook-form)
-- [Zod](https://www.npmjs.com/package/zod)
-- [Prisma](https://www.npmjs.com/package/prisma)
-- [shadcn/ui](https://ui.shadcn.com/)
-- [Short Unique ID](https://www.npmjs.com/package/short-unique-id)
-- [React Icons](https://www.npmjs.com/package/react-icons)
+- Next.js
+- Typescript
+- Tailwind CSS
+- Clerk Auth
+- React Hook Form
+- zod
+- Prisma
+- shadcn/ui
+- Short Unique ID
 
-# [Live Demo](https://julian-rapidlink.vercel.app/)
+## ✨ Usage
+
+```bash
+git clone https://github.com/piaseckijulian/RapidLink.git
+cd RapidLink
+pnpm dev
+```
+
+Next, duplicate the .env.example file, rename the duplicate to .env, and then input your environmental variables there.
+
+```bash
+pnpx prisma db push
+```
+
+That's it! - You're good to go. You can add new features, fix bugs etc.
+
+## 🌐 Contribution
+
+If you want to contribute to this amazing project simply raise an **Issue** when you found a bug or you are requesting a new feature. However if you want to do it yourself create a **Pull Request**.
