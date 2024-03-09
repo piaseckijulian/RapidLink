@@ -4,7 +4,7 @@ import { Poppins } from 'next/font/google';
 import type { PropsWithChildren } from 'react';
 import '../globals.css';
 
-const poppins = Poppins({ subsets: ['latin'], weight: ['400', '500', '700'] });
+const poppins = Poppins({ subsets: ['latin'], weight: ['400', '500', '600', '700'] });
 
 export const metadata: Metadata = {
   title: 'RapidLink',
