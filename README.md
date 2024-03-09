@@ -23,6 +23,7 @@ RapidLink, your go-to URL shortener, facilitates quick and easy link management 
 - Prisma
 - shadcn/ui
 - Short Unique ID
+- Clipboard Copy
 
 ## ✨ Usage
 

@@ -1,5 +1,5 @@
 import { SignIn } from '@clerk/nextjs';
 
-const SignImPage = () => <SignIn />;
+const Page = () => <SignIn />;
 
-export default SignImPage;
+export default Page;

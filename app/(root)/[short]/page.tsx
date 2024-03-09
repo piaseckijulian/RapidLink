@@ -1,15 +1,15 @@
-import { getURL } from '@/actions';
+import { getUrl } from '@/actions';
 import { redirect } from 'next/navigation';
 
 interface Props {
   params: { short: string };
 }
 
-const UrlPage = async ({ params: { short } }: Props) => {
-  const url = await getURL(short);
+const Page = async ({ params: { short } }: Props) => {
+  const url = await getUrl(short);
   if (!url) redirect('/');
 
   redirect(url.full);
 };
 
-export default UrlPage;
+export default Page;
