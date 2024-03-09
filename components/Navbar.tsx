@@ -17,7 +17,7 @@ const Navbar = () => {
           <Link
             className={buttonVariants({
               className:
-                'hidden !bg-background !font-bold !text-primary hover:!bg-background/80 xs:inline-flex xs:text-lg'
+                'hidden !bg-background !font-bold !text-primary hover:!bg-background/95 xs:inline-flex xs:text-lg'
             })}
             href="/urls"
           >
@@ -27,7 +27,7 @@ const Navbar = () => {
           <Link
             className={buttonVariants({
               className:
-                '!bg-background !font-bold !text-primary hover:!bg-background/80 xs:hidden',
+                '!bg-background !font-bold !text-primary hover:!bg-background/95 xs:hidden',
               size: 'icon'
             })}
             href="/urls"
@@ -43,7 +43,7 @@ const Navbar = () => {
         <Link
           className={buttonVariants({
             className:
-              '!bg-background !text-lg !font-bold !text-primary hover:!bg-background/80'
+              '!bg-background !text-lg !font-bold !text-primary hover:!bg-background/95'
           })}
           href="/sign-in"
         >
