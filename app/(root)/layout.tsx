@@ -24,7 +24,7 @@ const RootLayout = ({ children }: PropsWithChildren) => (
     <html lang="en">
       <body className={poppins.className}>
         <Navbar />
-        <main className="xs:container max-xs:px-5">{children}</main>
+        <main className="xs:container max-xs:px-4">{children}</main>
       </body>
     </html>
   </ClerkProvider>

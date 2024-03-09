@@ -5,7 +5,7 @@ import { buttonVariants } from './ui/button';
 
 const Navbar = () => {
   return (
-    <nav className="flex items-center justify-between bg-primary px-4 py-4 xs:px-10 sm:px-20 ">
+    <nav className="flex items-center justify-between bg-primary px-4 py-4 xs:px-8">
       <Link href="/">
         <h2 className="text-xl font-bold text-white xs:text-2xl sm:text-3xl">
           RapidLink
@@ -17,7 +17,7 @@ const Navbar = () => {
           <Link
             className={buttonVariants({
               className:
-                'hidden !bg-background !font-bold !text-primary xs:inline-flex xs:text-lg'
+                'hidden !bg-background !font-bold !text-primary hover:!bg-background/80 xs:inline-flex xs:text-lg'
             })}
             href="/urls"
           >
@@ -26,7 +26,8 @@ const Navbar = () => {
 
           <Link
             className={buttonVariants({
-              className: '!bg-background !font-bold !text-primary xs:hidden',
+              className:
+                '!bg-background !font-bold !text-primary hover:!bg-background/80 xs:hidden',
               size: 'icon'
             })}
             href="/urls"
@@ -41,7 +42,8 @@ const Navbar = () => {
       <SignedOut>
         <Link
           className={buttonVariants({
-            className: '!bg-background !text-lg !font-bold !text-primary'
+            className:
+              '!bg-background !text-lg !font-bold !text-primary hover:!bg-background/80'
           })}
           href="/sign-in"
         >
