@@ -1,5 +1,7 @@
 import Navbar from '@/components/Navbar';
 import { ClerkProvider } from '@clerk/nextjs';
+import { Analytics } from '@vercel/analytics/react';
+import { SpeedInsights } from '@vercel/speed-insights/next';
 import type { Metadata } from 'next';
 import { Poppins } from 'next/font/google';
 import type { PropsWithChildren } from 'react';
@@ -25,6 +27,8 @@ const RootLayout = ({ children }: PropsWithChildren) => (
       <body className={poppins.className}>
         <Navbar />
         <main className="xs:container max-xs:px-4">{children}</main>
+        <SpeedInsights />
+        <Analytics />
       </body>
     </html>
   </ClerkProvider>
