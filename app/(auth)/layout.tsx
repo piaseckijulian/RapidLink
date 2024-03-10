@@ -13,7 +13,13 @@ export const metadata: Metadata = {
 };
 
 const RootLayout = ({ children }: PropsWithChildren) => (
-  <ClerkProvider appearance={{ variables: { colorPrimary: '#2563eb' } }}>
+  <ClerkProvider
+    appearance={{
+      variables: { colorPrimary: '#2563eb' },
+      signIn: { layout: { socialButtonsVariant: 'iconButton' } },
+      signUp: { layout: { socialButtonsVariant: 'iconButton' } }
+    }}
+  >
     <html lang="en">
       <body className={poppins.className}>
         <main className="flex h-screen items-center justify-center">{children}</main>

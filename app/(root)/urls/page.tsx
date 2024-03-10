@@ -1,5 +1,5 @@
-import { getUserUrls } from '@/actions';
 import UrlTable from '@/components/UrlTable';
+import { getUserUrls } from '@/lib/actions';
 import { currentUser } from '@clerk/nextjs';
 import { redirect } from 'next/navigation';
 
@@ -13,7 +13,7 @@ const Page = async () => {
     <>
       <h1 className="mb-8 mt-10 text-center text-4xl font-bold sm:text-5xl">Your URLs</h1>
 
-      <UrlTable urls={urls} />
+      <UrlTable urls={urls || []} />
     </>
   );
 };

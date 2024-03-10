@@ -1,6 +1,5 @@
 'use client';
 
-import { deleteUrl } from '@/actions';
 import {
   AlertDialog,
   AlertDialogAction,
@@ -11,6 +10,7 @@ import {
   AlertDialogHeader,
   AlertDialogTitle
 } from '@/components/ui/alert-dialog';
+import { deleteUrl } from '@/lib/actions';
 import { useRouter } from 'next/navigation';
 
 interface Props {

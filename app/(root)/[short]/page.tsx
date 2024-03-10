@@ -1,4 +1,4 @@
-import { getUrl } from '@/actions';
+import { getUrl } from '@/lib/actions';
 import { redirect } from 'next/navigation';
 
 interface Props {

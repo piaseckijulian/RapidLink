@@ -1,10 +1,11 @@
 'use client';
 
-import { createUrl } from '@/actions';
+import { createUrl } from '@/lib/actions';
 import { useAuth } from '@clerk/nextjs';
 import { zodResolver } from '@hookform/resolvers/zod';
 import copy from 'clipboard-copy';
 import { Check, Copy } from 'lucide-react';
+import { useRouter } from 'next/navigation';
 import { useState } from 'react';
 import { SubmitHandler, useForm } from 'react-hook-form';
 import { z } from 'zod';
@@ -33,17 +34,25 @@ const CreateUrlForm = () => {
   const [creatingUrlProgress, setCreatingUrlProgress] = useState(false);
   const [shortUrl, setShortUrl] = useState('');
   const [isCopied, setIsCopied] = useState(false);
+  const router = useRouter();
 
   const onSubmit: SubmitHandler<urlSchemaType> = async data => {
     try {
       setIsCopied(false);
       setCreatingUrlProgress(true);
       const url = await createUrl(data.fullURL, userId);
+
+      if (!url) {
+        console.error('Failed to create a URL');
+        return;
+      }
+
       setShortUrl(`${process.env.NEXT_PUBLIC_WEBSITE_URL}/${url.short}`);
     } catch (error) {
-      throw error;
+      console.error(error);
     } finally {
       setCreatingUrlProgress(false);
+      router.refresh();
     }
   };
 
@@ -52,7 +61,7 @@ const CreateUrlForm = () => {
       await copy(shortUrl);
       setIsCopied(true);
     } catch (error) {
-      throw error;
+      console.error(error);
     }
   };
 
