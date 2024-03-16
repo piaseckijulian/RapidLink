@@ -1,5 +1,5 @@
 import ActionsCell from '@/components/ActionsCell';
-import type { Url } from '@prisma/client';
+import { type Url } from '@prisma/client';
 import { ColumnDef } from '@tanstack/react-table';
 import Link from 'next/link';
 
@@ -22,7 +22,7 @@ export const columns: ColumnDef<Url>[] = [
     header: 'Short URL',
     cell: ({ row }) => {
       const shortUrl = row.getValue('short');
-      const url = `${process.env.NEXT_PUBLIC_WEBSITE_URL}/${shortUrl}`;
+      const url = `${process.env.NEXT_PUBLIC_SITE_URL}/${shortUrl}`;
 
       return (
         <Link href={url} className="hover:underline" target="_blank">

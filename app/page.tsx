@@ -1,6 +1,6 @@
 import CreateUrlForm from '@/components/CreateUrlForm';
 
-const Home = () => {
+const Page = () => {
   return (
     <>
       <h1 className="mb-8 mt-10 text-center text-4xl font-bold sm:text-5xl">
@@ -12,4 +12,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default Page;

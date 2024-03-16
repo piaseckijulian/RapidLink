@@ -8,8 +8,8 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger
 } from '@/components/ui/dropdown-menu';
-import type { Url } from '@prisma/client';
-import type { Row } from '@tanstack/react-table';
+import { type Url } from '@prisma/client';
+import { type Row } from '@tanstack/react-table';
 import { MoreHorizontal } from 'lucide-react';
 import { useState } from 'react';
 

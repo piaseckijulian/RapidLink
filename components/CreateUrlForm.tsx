@@ -47,7 +47,7 @@ const CreateUrlForm = () => {
         return;
       }
 
-      setShortUrl(`${process.env.NEXT_PUBLIC_WEBSITE_URL}/${url.short}`);
+      setShortUrl(`${process.env.NEXT_PUBLIC_SITE_URL}/${url.short}`);
     } catch (error) {
       console.error(error);
     } finally {
@@ -110,7 +110,7 @@ const CreateUrlForm = () => {
           loading={form.formState.isSubmitting}
           disabled={creatingUrlProgress}
           type="submit"
-          className="w-full text-lg font-medium"
+          className="w-full"
         >
           Get URL
         </LoadingButton>

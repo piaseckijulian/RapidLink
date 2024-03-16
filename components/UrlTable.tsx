@@ -1,7 +1,7 @@
 'use client';
 
-import { columns } from '@/app/(root)/urls/columns';
-import type { Url } from '@prisma/client';
+import { columns } from '@/app/urls/columns';
+import { type Url } from '@prisma/client';
 import { DataTable } from './ui/data-table';
 
 interface Props {

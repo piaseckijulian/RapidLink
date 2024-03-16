@@ -1,7 +1,7 @@
-import { SignedIn, SignedOut, UserButton } from '@clerk/nextjs';
+import { SignInButton, SignedIn, SignedOut, UserButton } from '@clerk/nextjs';
 import { Link as LinkIcon } from 'lucide-react';
 import Link from 'next/link';
-import { buttonVariants } from './ui/button';
+import { Button, buttonVariants } from './ui/button';
 
 const Navbar = () => {
   return (
@@ -16,23 +16,23 @@ const Navbar = () => {
         <div className="flex items-center gap-2">
           <Link
             className={buttonVariants({
-              className:
-                'hidden !bg-background !font-bold !text-primary hover:!bg-background/95 xs:inline-flex xs:text-lg'
+              variant: 'white',
+              className: 'hidden xs:inline-flex',
             })}
             href="/urls"
           >
-            Your URLs
+            Your links
           </Link>
 
           <Link
             className={buttonVariants({
-              className:
-                '!bg-background !font-bold !text-primary hover:!bg-background/95 xs:hidden',
-              size: 'icon'
+              className: 'xs:hidden',
+              size: 'icon',
+              variant: 'white'
             })}
             href="/urls"
           >
-            <LinkIcon />
+            <LinkIcon size={24}/>
           </Link>
 
           <UserButton />
@@ -40,15 +40,9 @@ const Navbar = () => {
       </SignedIn>
 
       <SignedOut>
-        <Link
-          className={buttonVariants({
-            className:
-              '!bg-background !text-lg !font-bold !text-primary hover:!bg-background/95'
-          })}
-          href="/sign-in"
-        >
-          Sign In
-        </Link>
+        <SignInButton mode="modal">
+          <Button variant="white">Sign In</Button>
+        </SignInButton>
       </SignedOut>
     </nav>
   );
