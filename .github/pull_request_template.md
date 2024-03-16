@@ -14,7 +14,7 @@
 
 - [ ] My code aligns with the project's coding style.
 - [ ] All existing and new tests have successfully passed.
-- [ ] This PR is free from plagiarized content.
+- [ ] This pull request is free from plagiarized content.
 - [ ] The pull request title succinctly describes the requested changes.
 
 ## Screenshots (if applicable)
