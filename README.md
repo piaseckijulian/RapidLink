@@ -36,7 +36,7 @@ pnpm dev
 Next, duplicate the .env.example file, rename the duplicate to .env, and then input your environmental variables there.
 
 ```bash
-pnpx prisma db push
+pnpm db:push
 ```
 
 That's it! - You're good to go. You can add new features, fix bugs etc.
