@@ -11,7 +11,9 @@ const Page = async () => {
 
   return (
     <>
-      <h1 className="mb-8 mt-10 text-center text-4xl font-bold sm:text-5xl">Your links</h1>
+      <h1 className="mb-8 mt-10 text-center text-4xl font-bold sm:text-5xl">
+        Your links
+      </h1>
 
       <UrlTable urls={urls || []} />
     </>

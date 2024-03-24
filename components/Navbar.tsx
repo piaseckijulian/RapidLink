@@ -17,7 +17,7 @@ const Navbar = () => {
           <Link
             className={buttonVariants({
               variant: 'white',
-              className: 'hidden xs:inline-flex',
+              className: 'hidden xs:inline-flex'
             })}
             href="/urls"
           >
@@ -32,7 +32,7 @@ const Navbar = () => {
             })}
             href="/urls"
           >
-            <LinkIcon size={24}/>
+            <LinkIcon size={24} />
           </Link>
 
           <UserButton />
