@@ -6,7 +6,7 @@
 
 RapidLink, your go-to URL shortener, facilitates quick and easy link management with a user-friendly interface, making it the perfect solution for all your URL shortening needs. 🚀
 
-<img src="./images/image.png" alt="Image of RapidLink" width="800" height="400" />
+<img src="./public/thumbnail.png" alt="Image of RapidLink" width="800" height="400" />
 
 ## 🔗 Links
 

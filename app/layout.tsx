@@ -1,4 +1,5 @@
 import Navbar from '@/components/Navbar';
+import { createMetadata } from '@/lib/utils';
 import { ClerkProvider } from '@clerk/nextjs';
 import { Analytics } from '@vercel/analytics/react';
 import { SpeedInsights } from '@vercel/speed-insights/next';
@@ -9,11 +10,12 @@ import './globals.css';
 
 const poppins = Poppins({ subsets: ['latin'], weight: ['400', '500', '600', '700'] });
 
-export const metadata: Metadata = {
-  title: 'RapidLink',
-  description:
-    'RapidLink, your go-to URL shortener, facilitates quick and easy link management with a user-friendly interface, making it the perfect solution for all your URL shortening needs.'
-};
+export const metadata: Metadata = createMetadata(
+  'RapidLink',
+  'RapidLink, your go-to URL shortener, facilitates quick and easy link management with a user-friendly interface, making it the perfect solution for all your URL shortening needs.',
+  '/thumbnail.png',
+  new URL('https://julian-rapidlink.vercel.app')
+);
 
 const RootLayout = ({ children }: PropsWithChildren) => (
   <ClerkProvider
