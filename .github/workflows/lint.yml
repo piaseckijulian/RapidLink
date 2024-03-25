@@ -1,4 +1,4 @@
-name: Format Code
+name: Lint Code
 
 on: [push, pull_request]
 
@@ -23,5 +23,5 @@ jobs:
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
 
-      - name: Format
-        run: pnpm format:check
+      - name: Lint
+        run: pnpm lint
