@@ -8,14 +8,14 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger
 } from '@/components/ui/dropdown-menu';
-import { type Url } from '@prisma/client';
+import { type Link } from '@prisma/client';
 import { type Row } from '@tanstack/react-table';
 import { MoreHorizontal } from 'lucide-react';
 import { useState } from 'react';
 
-const ActionsCell = ({ row }: { row: Row<Url> }) => {
+const ActionsCell = ({ row }: { row: Row<Link> }) => {
   const [isOpen, setIsOpen] = useState(false);
-  const url = row.original;
+  const link = row.original;
 
   return (
     <>
@@ -34,7 +34,7 @@ const ActionsCell = ({ row }: { row: Row<Url> }) => {
         </DropdownMenuContent>
       </DropdownMenu>
 
-      <ConfirmDeleteDialog isOpen={isOpen} setIsOpen={setIsOpen} id={url.id} />
+      <ConfirmDeleteDialog isOpen={isOpen} setIsOpen={setIsOpen} id={link.id} />
     </>
   );
 };

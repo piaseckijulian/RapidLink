@@ -1,13 +1,13 @@
-import UrlTable from '@/components/UrlTable';
-import { getUserUrls } from '@/lib/actions';
+import LinksTable from '@/components/LinksTable';
+import { getUserLinks } from '@/lib/actions';
 import { currentUser } from '@clerk/nextjs';
 import { redirect } from 'next/navigation';
 
-const Page = async () => {
+const LinksPage = async () => {
   const user = await currentUser();
   if (!user) redirect('/');
 
-  const urls = await getUserUrls(user.id);
+  const links = await getUserLinks(user.id);
 
   return (
     <>
@@ -15,9 +15,9 @@ const Page = async () => {
         Your links
       </h1>
 
-      <UrlTable urls={urls || []} />
+      <LinksTable links={links!} />
     </>
   );
 };
 
-export default Page;
+export default LinksPage;

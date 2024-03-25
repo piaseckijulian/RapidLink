@@ -1,15 +1,17 @@
-import { getUrl } from '@/lib/actions';
+import { getShortLink, updateVisitCount } from '@/lib/actions';
 import { redirect } from 'next/navigation';
 
 interface Props {
   params: { short: string };
 }
 
-const Page = async ({ params: { short } }: Props) => {
-  const url = await getUrl(short);
-  if (!url) redirect('/');
+const ShortRedirect = async ({ params: { short } }: Props) => {
+  const link = await getShortLink(short);
+  if (!link) redirect('/');
 
-  redirect(url.full);
+  await updateVisitCount(link.id, link.visitCount + 1);
+
+  redirect(link.full);
 };
 
-export default Page;
+export default ShortRedirect;

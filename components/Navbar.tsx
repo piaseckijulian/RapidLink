@@ -19,7 +19,7 @@ const Navbar = () => {
               variant: 'white',
               className: 'hidden xs:inline-flex'
             })}
-            href="/urls"
+            href="/links"
           >
             Your links
           </Link>
@@ -30,7 +30,7 @@ const Navbar = () => {
               size: 'icon',
               variant: 'white'
             })}
-            href="/urls"
+            href="/links"
           >
             <LinkIcon size={24} />
           </Link>
