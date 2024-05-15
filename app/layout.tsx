@@ -25,6 +25,9 @@ const RootLayout = ({ children }: PropsWithChildren) => (
     appearance={{
       elements: {
         userButtonAvatarBox: 'h-8 w-8 xs:h-12 xs:w-12'
+      },
+      variables: {
+        colorPrimary: '#2563eb'
       }
     }}
   >
