@@ -9,21 +9,22 @@ export const GET = async (req: NextRequest, res: NextResponse) => {
   }
 
   try {
-    /*
-      Delete every link that:
-        - hasn't got an author and hasn't been visited for more than 3 months
-    */
+    const MS_IN_THREE_MONTHS = 3 * 30 * 24 * 60 * 60 * 1000;
 
+    /*  Delete every link that:
+          - hasn't s an author 
+          - is older than 3 months
+          - hasn't been visited for more than 3 months
+    */
     await db.link.deleteMany({
       where: {
         userId: null,
+        createdAt: {
+          lt: new Date(Date.now() - MS_IN_THREE_MONTHS)
+        },
         OR: [
           { lastVisitedAt: null },
-          {
-            lastVisitedAt: {
-              lt: new Date(Date.now() - 3 * 30 * 24 * 60 * 60 * 1000)
-            }
-          }
+          { lastVisitedAt: { lt: new Date(Date.now() - MS_IN_THREE_MONTHS) } }
         ]
       }
     });
