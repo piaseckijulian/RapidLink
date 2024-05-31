@@ -10,7 +10,13 @@ export const createMetadata = (
 ): Metadata => ({
   title,
   description,
-  openGraph: { title, description, images: [{ url: image }], url, siteName: title },
+  openGraph: {
+    title,
+    description,
+    images: [{ url: image }],
+    url,
+    siteName: title
+  },
   twitter: {
     card: 'summary_large_image',
     title,
