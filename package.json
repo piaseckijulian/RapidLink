@@ -6,12 +6,11 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint",
+    "lint": "prettier --check . && next lint",
+    "format": "prettier . --write",
     "postinstall": "prisma generate",
     "db:push": "prisma db push",
     "db:studio": "prisma studio",
-    "format": "prettier . -w",
-    "format:check": "prettier . -c",
     "prepare": "husky"
   },
   "dependencies": {
