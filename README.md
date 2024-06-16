@@ -17,12 +17,12 @@ RapidLink, your go-to Link shortener, facilitates quick and easy link management
 - Next.js
 - Typescript
 - Tailwind CSS
-- Clerk Auth
-- React Hook Form
-- zod
-- Prisma
 - shadcn/ui
-- nanoid
+- Tanstack React Table
+- Clerk
+- React Hook Form
+- Zod
+- NanoID
 - Clipboard Copy
 
 ## ✨ Usage
