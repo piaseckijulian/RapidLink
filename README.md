@@ -15,10 +15,10 @@ RapidLink, your go-to Link shortener, facilitates quick and easy link management
 ## 📐 Tech Stack
 
 - Next.js
-- Typescript
+- TypeScript
 - Tailwind CSS
 - shadcn/ui
-- Tanstack React Table
+- TanStack React Table
 - Clerk
 - React Hook Form
 - Zod
