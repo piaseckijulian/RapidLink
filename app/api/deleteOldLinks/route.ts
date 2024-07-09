@@ -12,7 +12,7 @@ export const GET = async (req: NextRequest, res: NextResponse) => {
     const MS_IN_THREE_MONTHS = 3 * 30 * 24 * 60 * 60 * 1000;
 
     /*  Delete every link that:
-          - hasn't s an author 
+          - hasn't got an author 
           - is older than 3 months
           - hasn't been visited for more than 3 months
     */
