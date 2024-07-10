@@ -9,7 +9,7 @@ interface Props {
 }
 
 const LinksTable = ({ links }: Props) => {
-  return <DataTable columns={columns} data={links} />
+  return <DataTable columns={columns} data={links || []} />
 }
 
 export default LinksTable
