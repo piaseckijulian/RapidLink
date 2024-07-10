@@ -4,33 +4,33 @@ import db from "@/lib/db"
 import { nanoid } from "nanoid"
 import { revalidatePath } from "next/cache"
 
-export const createLink = async (
-  full: string,
+export const createUrl = async (
+  fullUrl: string,
   userId: string | null = null,
 ) => {
   try {
-    const short = nanoid(6)
-    const link = await db.link.create({ data: { full, short, userId } })
+    const shortUrl = nanoid(6)
+    const url = await db.url.create({ data: { fullUrl, shortUrl, userId } })
 
-    revalidatePath("/links")
+    revalidatePath("/urls")
 
-    return link
+    return url
   } catch (error) {
     console.error(error)
   }
 }
 
-export const getShortLink = async (short: string) => {
+export const getShortUrl = async (shortUrl: string) => {
   try {
-    return await db.link.findUnique({ where: { short } })
+    return await db.url.findUnique({ where: { shortUrl } })
   } catch (error) {
     console.error(error)
   }
 }
 
-export const getUserLinks = async (userId: string) => {
+export const getUserUrls = async (userId: string) => {
   try {
-    return await db.link.findMany({
+    return await db.url.findMany({
       where: { userId },
       orderBy: { createdAt: "desc" },
     })
@@ -39,31 +39,31 @@ export const getUserLinks = async (userId: string) => {
   }
 }
 
-export const deleteLink = async (id: string) => {
+export const deleteUrl = async (id: string) => {
   try {
-    const link = await db.link.delete({ where: { id } })
+    const url = await db.url.delete({ where: { id } })
 
-    revalidatePath("/links")
+    revalidatePath("/urls")
 
-    return link
+    return url
   } catch (error) {
     console.error(error)
   }
 }
 
-interface LinkVisitParams {
+type onUrlVisit = {
   id: string
   visitCount: number
   lastVisitedAt: Date
 }
 
-export const linkVisit = async ({
+export const onUrlVisit = async ({
   id,
   lastVisitedAt,
   visitCount,
-}: LinkVisitParams) => {
+}: onUrlVisit) => {
   try {
-    return await db.link.update({
+    return await db.url.update({
       where: { id },
       data: { visitCount, lastVisitedAt },
     })

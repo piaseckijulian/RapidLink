@@ -1,32 +1,32 @@
 import ActionsCell from "@/components/ActionsCell"
-import type { Link as LinkType } from "@prisma/client"
+import type { Url } from "@prisma/client"
 import type { ColumnDef } from "@tanstack/react-table"
 import Link from "next/link"
 
-export const columns: ColumnDef<LinkType>[] = [
+export const columns: ColumnDef<Url>[] = [
   {
-    accessorKey: "full",
-    header: "Full Link",
+    accessorKey: "fullUrl",
+    header: "Full URL",
     cell: ({ row }) => {
-      const fullLink: string = row.getValue("full")
+      const fullUrl: string = row.getValue("fullUrl")
 
       return (
-        <Link href={fullLink} className="hover:underline" target="_blank">
-          {fullLink}
+        <Link href={fullUrl} className="hover:underline" target="_blank">
+          {fullUrl}
         </Link>
       )
     },
   },
   {
-    accessorKey: "short",
-    header: "Short Link",
+    accessorKey: "shortUrl",
+    header: "Short URL",
     cell: ({ row }) => {
-      const shortLink = row.getValue("short")
-      const link = `${process.env.NEXT_PUBLIC_SITE_URL}/${shortLink}`
+      const shortUrl = row.getValue("shortUrl")
+      const url = `${process.env.NEXT_PUBLIC_SITE_URL}/${shortUrl}`
 
       return (
-        <Link href={link} className="hover:underline" target="_blank">
-          {link}
+        <Link href={url} className="hover:underline" target="_blank">
+          {url}
         </Link>
       )
     },

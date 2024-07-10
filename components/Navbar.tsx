@@ -14,23 +14,25 @@ const Navbar = () => {
 
       <SignedIn>
         <div className="flex items-center gap-2">
+          {/* Desktop */}
           <Link
             className={buttonVariants({
               variant: "white",
               className: "xs:inline-flex hidden",
             })}
-            href="/links"
+            href="/urls"
           >
-            Your links
+            Your URLs
           </Link>
 
+          {/* Mobile */}
           <Link
             className={buttonVariants({
               className: "xs:hidden",
               size: "icon",
               variant: "white",
             })}
-            href="/links"
+            href="/urls"
           >
             <LinkIcon size={24} />
           </Link>

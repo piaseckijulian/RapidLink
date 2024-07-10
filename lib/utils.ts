@@ -2,29 +2,28 @@ import { type ClassValue, clsx } from "clsx"
 import type { Metadata } from "next"
 import { twMerge } from "tailwind-merge"
 
-export const createMetadata = (
-  title: string,
-  description: string,
-  image: string,
-  url: URL,
-): Metadata => ({
+const title = "RapidLink"
+const description =
+  "RapidLink swiftly shortens long URLs for convenient sharing."
+const image = "/thumbnail.png"
+const url = new URL("https://julian-rapidlink.vercel.app")
+
+export const createMetadata = (): Metadata => ({
   title,
   description,
+  twitter: {
+    title,
+    description,
+    images: image,
+    card: "summary_large_image",
+  },
   openGraph: {
     title,
     description,
-    images: [{ url: image }],
     url,
+    images: image,
     siteName: title,
   },
-  twitter: {
-    card: "summary_large_image",
-    title,
-    description,
-    images: [image],
-    creator: "@piaseckijulian",
-  },
-  icons: ["/favicon.ico"],
   metadataBase: url,
 })
 

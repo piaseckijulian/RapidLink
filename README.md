@@ -4,7 +4,7 @@
 ![GitHub forks](https://img.shields.io/github/forks/piaseckijulian/RapidLink?style=for-the-badge)
 ![GitHub watchers](https://img.shields.io/github/watchers/piaseckijulian/RapidLink?style=for-the-badge)
 
-RapidLink, your go-to Link shortener, facilitates quick and easy link management with a user-friendly interface, making it the perfect solution for all your links shortening needs. 🚀
+RapidLink swiftly shortens long URLs for convenient sharing. 🚀
 
 <img src="./public/thumbnail.png" alt="Image of RapidLink" width="800" height="400" />
 

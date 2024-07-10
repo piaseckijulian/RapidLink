@@ -11,12 +11,12 @@ export const GET = async (req: NextRequest, res: NextResponse) => {
   try {
     const MS_IN_THREE_MONTHS = 3 * 30 * 24 * 60 * 60 * 1000
 
-    /*  Delete every link that:
+    /*  Delete every url that:
           - hasn't got an author 
           - is older than 3 months
           - hasn't been visited for more than 3 months
     */
-    await db.link.deleteMany({
+    await db.url.deleteMany({
       where: {
         userId: null,
         createdAt: {
@@ -29,7 +29,7 @@ export const GET = async (req: NextRequest, res: NextResponse) => {
       },
     })
 
-    return Response.json("Successfully deleted old links", { status: 200 })
+    return Response.json("Successfully deleted old URLs", { status: 200 })
   } catch (error) {
     console.error(error)
     return Response.json("Something went wrong", { status: 500 })

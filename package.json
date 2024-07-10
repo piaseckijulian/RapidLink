@@ -6,12 +6,12 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "check": "biome check .",
-    "check:ci": "biome ci .",
-    "format": "biome format . --write",
     "postinstall": "prisma generate",
     "db:push": "prisma db push",
     "db:studio": "prisma studio",
+    "check": "biome check .",
+    "check:ci": "biome ci .",
+    "format": "biome format . --write",
     "prepare": "husky"
   },
   "dependencies": {

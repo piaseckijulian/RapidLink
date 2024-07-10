@@ -10,9 +10,9 @@ import {
   AlertDialogHeader,
   AlertDialogTitle,
 } from "@/components/ui/alert-dialog"
-import { deleteLink } from "@/lib/actions"
+import { deleteUrl } from "@/lib/actions"
 
-interface Props {
+type Props = {
   isOpen: boolean
   setIsOpen: (isOpen: boolean) => void
   id: string
@@ -25,7 +25,7 @@ const ConfirmDeleteDialog = ({ isOpen, setIsOpen, id }: Props) => {
         <AlertDialogHeader>
           <AlertDialogTitle>Are you sure?</AlertDialogTitle>
           <AlertDialogDescription>
-            This action cannot be undone. This will permanently delete this Link
+            This action cannot be undone. This will permanently delete this URL
             and make it unaccessible for others.
           </AlertDialogDescription>
         </AlertDialogHeader>
@@ -34,7 +34,7 @@ const ConfirmDeleteDialog = ({ isOpen, setIsOpen, id }: Props) => {
           <AlertDialogAction
             className="bg-destructive hover:bg-destructive/80"
             onClick={async () => {
-              await deleteLink(id)
+              await deleteUrl(id)
             }}
           >
             Delete

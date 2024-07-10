@@ -13,12 +13,7 @@ const poppins = Poppins({
   weight: ["400", "500", "600", "700"],
 })
 
-export const metadata: Metadata = createMetadata(
-  "RapidLink",
-  "RapidLink, your go-to Link shortener, facilitates quick and easy link management with a user-friendly interface, making it the perfect solution for all your links shortening needs.",
-  "/thumbnail.png",
-  new URL("https://julian-rapidlink.vercel.app"),
-)
+export const metadata: Metadata = createMetadata()
 
 const RootLayout = ({ children }: PropsWithChildren) => (
   <ClerkProvider

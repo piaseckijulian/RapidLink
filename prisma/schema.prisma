@@ -8,12 +8,12 @@ datasource db {
   directUrl = env("POSTGRES_URL_NON_POOLING")
 }
 
-model Link {
+model Url {
   id            String    @id @default(cuid())
-  short         String    @unique
-  full          String
-  visitCount    Int       @default(0)
+  shortUrl      String    @unique
+  fullUrl       String
   userId        String?
+  visitCount    Int       @default(0)
   lastVisitedAt DateTime?
   createdAt     DateTime  @default(now())
   updatedAt     DateTime  @updatedAt
