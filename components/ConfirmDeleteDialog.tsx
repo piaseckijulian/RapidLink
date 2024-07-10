@@ -1,4 +1,4 @@
-'use client';
+"use client"
 
 import {
   AlertDialog,
@@ -8,14 +8,14 @@ import {
   AlertDialogDescription,
   AlertDialogFooter,
   AlertDialogHeader,
-  AlertDialogTitle
-} from '@/components/ui/alert-dialog';
-import { deleteLink } from '@/lib/actions';
+  AlertDialogTitle,
+} from "@/components/ui/alert-dialog"
+import { deleteLink } from "@/lib/actions"
 
 interface Props {
-  isOpen: boolean;
-  setIsOpen: (isOpen: boolean) => void;
-  id: string;
+  isOpen: boolean
+  setIsOpen: (isOpen: boolean) => void
+  id: string
 }
 
 const ConfirmDeleteDialog = ({ isOpen, setIsOpen, id }: Props) => {
@@ -34,7 +34,7 @@ const ConfirmDeleteDialog = ({ isOpen, setIsOpen, id }: Props) => {
           <AlertDialogAction
             className="bg-destructive hover:bg-destructive/80"
             onClick={async () => {
-              await deleteLink(id);
+              await deleteLink(id)
             }}
           >
             Delete
@@ -42,7 +42,7 @@ const ConfirmDeleteDialog = ({ isOpen, setIsOpen, id }: Props) => {
         </AlertDialogFooter>
       </AlertDialogContent>
     </AlertDialog>
-  );
-};
+  )
+}
 
-export default ConfirmDeleteDialog;
+export default ConfirmDeleteDialog

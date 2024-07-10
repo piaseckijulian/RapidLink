@@ -1,9 +1,9 @@
-import { Loader2 } from 'lucide-react';
-import { Button, ButtonProps } from './button';
+import { Loader2 } from "lucide-react"
+import { Button, type ButtonProps } from "./button"
 
 type Props = {
-  loading: boolean;
-} & ButtonProps;
+  loading: boolean
+} & ButtonProps
 
 export const LoadingButton = ({ children, loading, ...props }: Props) => {
   return (
@@ -11,5 +11,5 @@ export const LoadingButton = ({ children, loading, ...props }: Props) => {
       {loading && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
       {children}
     </Button>
-  );
-};
+  )
+}

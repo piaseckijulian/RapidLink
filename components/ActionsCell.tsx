@@ -1,21 +1,21 @@
-'use client';
+"use client"
 
-import ConfirmDeleteDialog from '@/components/ConfirmDeleteDialog';
-import { Button } from '@/components/ui/button';
+import ConfirmDeleteDialog from "@/components/ConfirmDeleteDialog"
+import { Button } from "@/components/ui/button"
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
-  DropdownMenuTrigger
-} from '@/components/ui/dropdown-menu';
-import { type Link } from '@prisma/client';
-import { type Row } from '@tanstack/react-table';
-import { MoreHorizontal } from 'lucide-react';
-import { useState } from 'react';
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu"
+import type { Link } from "@prisma/client"
+import type { Row } from "@tanstack/react-table"
+import { MoreHorizontal } from "lucide-react"
+import { useState } from "react"
 
 const ActionsCell = ({ row }: { row: Row<Link> }) => {
-  const [isOpen, setIsOpen] = useState(false);
-  const link = row.original;
+  const [isOpen, setIsOpen] = useState(false)
+  const link = row.original
 
   return (
     <>
@@ -39,7 +39,7 @@ const ActionsCell = ({ row }: { row: Row<Link> }) => {
 
       <ConfirmDeleteDialog isOpen={isOpen} setIsOpen={setIsOpen} id={link.id} />
     </>
-  );
-};
+  )
+}
 
-export default ActionsCell;
+export default ActionsCell

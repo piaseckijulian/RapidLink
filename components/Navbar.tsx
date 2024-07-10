@@ -1,13 +1,13 @@
-import { SignInButton, SignedIn, SignedOut, UserButton } from '@clerk/nextjs';
-import { Link as LinkIcon } from 'lucide-react';
-import Link from 'next/link';
-import { Button, buttonVariants } from './ui/button';
+import { SignInButton, SignedIn, SignedOut, UserButton } from "@clerk/nextjs"
+import { Link as LinkIcon } from "lucide-react"
+import Link from "next/link"
+import { Button, buttonVariants } from "./ui/button"
 
 const Navbar = () => {
   return (
-    <nav className="flex items-center justify-between bg-primary px-4 py-4 xs:px-8">
+    <nav className="flex items-center justify-between bg-primary px-4 xs:px-8 py-4">
       <Link href="/">
-        <h2 className="text-xl font-bold text-white xs:text-2xl sm:text-3xl">
+        <h2 className="font-bold text-white text-xl xs:text-2xl sm:text-3xl">
           RapidLink
         </h2>
       </Link>
@@ -16,8 +16,8 @@ const Navbar = () => {
         <div className="flex items-center gap-2">
           <Link
             className={buttonVariants({
-              variant: 'white',
-              className: 'hidden xs:inline-flex'
+              variant: "white",
+              className: "xs:inline-flex hidden",
             })}
             href="/links"
           >
@@ -26,9 +26,9 @@ const Navbar = () => {
 
           <Link
             className={buttonVariants({
-              className: 'xs:hidden',
-              size: 'icon',
-              variant: 'white'
+              className: "xs:hidden",
+              size: "icon",
+              variant: "white",
             })}
             href="/links"
           >
@@ -45,7 +45,7 @@ const Navbar = () => {
         </SignInButton>
       </SignedOut>
     </nav>
-  );
-};
+  )
+}
 
-export default Navbar;
+export default Navbar
