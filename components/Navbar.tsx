@@ -7,7 +7,7 @@ const Navbar = () => {
   return (
     <nav className="flex items-center justify-between bg-primary px-4 xs:px-8 py-4">
       <Link href="/">
-        <h2 className="font-bold text-white text-xl xs:text-2xl sm:text-3xl">
+        <h2 className="font-bold text-background text-xl xs:text-2xl sm:text-3xl">
           RapidLink
         </h2>
       </Link>
@@ -17,7 +17,7 @@ const Navbar = () => {
           {/* Desktop */}
           <Link
             className={buttonVariants({
-              variant: "white",
+              variant: "secondary",
               className: "xs:inline-flex hidden",
             })}
             href="/urls"
@@ -30,7 +30,7 @@ const Navbar = () => {
             className={buttonVariants({
               className: "xs:hidden",
               size: "icon",
-              variant: "white",
+              variant: "secondary",
             })}
             href="/urls"
           >
@@ -43,7 +43,7 @@ const Navbar = () => {
 
       <SignedOut>
         <SignInButton mode="modal">
-          <Button variant="white">Sign In</Button>
+          <Button variant="secondary">Sign In</Button>
         </SignInButton>
       </SignedOut>
     </nav>

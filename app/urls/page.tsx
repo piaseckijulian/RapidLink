@@ -1,4 +1,4 @@
-import UrlsTable from "@/components/UrlsTable"
+import UrlTable from "@/components/UrlTable"
 import { getUserUrls } from "@/lib/actions"
 import { currentUser } from "@clerk/nextjs/server"
 import { redirect } from "next/navigation"
@@ -15,7 +15,7 @@ const UrlsPage = async () => {
         Your URLs
       </h1>
 
-      <UrlsTable urls={urls} />
+      <UrlTable urls={urls} />
     </>
   )
 }

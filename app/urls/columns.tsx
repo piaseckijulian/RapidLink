@@ -1,7 +1,7 @@
-import ActionsCell from "@/components/ActionsCell"
 import type { Url } from "@prisma/client"
 import type { ColumnDef } from "@tanstack/react-table"
 import Link from "next/link"
+import ActionsCell from "./actions-cell"
 
 export const columns: ColumnDef<Url>[] = [
   {

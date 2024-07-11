@@ -19,7 +19,7 @@ const RootLayout = ({ children }: PropsWithChildren) => (
   <ClerkProvider
     appearance={{
       elements: {
-        userButtonAvatarBox: "h-8 w-8 xs:h-12 xs:w-12",
+        userButtonAvatarBox: "h-8 w-8 xs:h-12 xs:w-12 focus:h-48 focus:h-48",
       },
       variables: {
         colorPrimary: "#2563eb",
@@ -29,7 +29,7 @@ const RootLayout = ({ children }: PropsWithChildren) => (
     <html lang="en">
       <body className={poppins.className}>
         <Navbar />
-        <main className="xs:container max-xs:px-4">{children}</main>
+        <main className="container">{children}</main>
         <SpeedInsights />
         <Analytics />
       </body>

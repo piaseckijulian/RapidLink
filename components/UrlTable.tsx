@@ -8,8 +8,8 @@ type Props = {
   urls: Url[] | undefined
 }
 
-const UrlsTable = ({ urls }: Props) => {
+const UrlTable = ({ urls }: Props) => {
   return <DataTable columns={columns} data={urls || []} />
 }
 
-export default UrlsTable
+export default UrlTable
