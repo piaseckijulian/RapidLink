@@ -19,7 +19,7 @@ const RootLayout = ({ children }: PropsWithChildren) => (
   <ClerkProvider
     appearance={{
       elements: {
-        userButtonAvatarBox: "h-8 w-8 xs:h-12 xs:w-12 focus:h-48 focus:h-48",
+        userButtonAvatarBox: "h-10 w-10 xs:h-12 xs:w-12",
       },
       variables: {
         colorPrimary: "#2563eb",
