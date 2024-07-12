@@ -51,7 +51,7 @@ export const deleteUrl = async (id: string) => {
   }
 }
 
-type onUrlVisit = {
+type OnUrlVisitParams = {
   id: string
   visitCount: number
   lastVisitedAt: Date
@@ -61,7 +61,7 @@ export const onUrlVisit = async ({
   id,
   lastVisitedAt,
   visitCount,
-}: onUrlVisit) => {
+}: OnUrlVisitParams) => {
   try {
     return await db.url.update({
       where: { id },
