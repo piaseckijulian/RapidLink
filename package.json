@@ -27,7 +27,7 @@
     "@vercel/speed-insights": "^1.0.10",
     "class-variance-authority": "^0.7.0",
     "clipboard-copy": "^4.0.1",
-    "lucide-react": "^0.414.0",
+    "lucide-react": "^0.416.0",
     "nanoid": "^5.0.7",
     "next": "^14.2.1",
     "react": "^18.2.0",
