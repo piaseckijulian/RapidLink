@@ -1,15 +1,13 @@
 "use client"
 
-import { columns } from "@/app/urls/columns"
+import { DataTable } from "@/components/ui/data-table"
 import type { Url } from "@prisma/client"
-import { DataTable } from "./ui/data-table"
+import { columns } from "./columns"
 
 type Props = {
   urls: Url[] | undefined
 }
 
-const UrlTable = ({ urls }: Props) => {
+export const UrlTable = ({ urls }: Props) => {
   return <DataTable columns={columns} data={urls || []} />
 }
-
-export default UrlTable

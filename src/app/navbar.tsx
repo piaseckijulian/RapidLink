@@ -1,9 +1,9 @@
 import { SignInButton, SignedIn, SignedOut, UserButton } from "@clerk/nextjs"
 import { Link as LinkIcon } from "lucide-react"
 import Link from "next/link"
-import { Button, buttonVariants } from "./ui/button"
+import { Button, buttonVariants } from "../components/ui/button"
 
-const Navbar = () => {
+export const Navbar = () => {
   return (
     <nav className="flex items-center justify-between bg-primary px-4 xs:px-8 py-4">
       <Link href="/">
@@ -49,5 +49,3 @@ const Navbar = () => {
     </nav>
   )
 }
-
-export default Navbar

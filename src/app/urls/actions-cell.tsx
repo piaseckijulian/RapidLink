@@ -1,6 +1,5 @@
 "use client"
 
-import ConfirmDeleteDialog from "@/components/ConfirmDeleteDialog"
 import { Button } from "@/components/ui/button"
 import {
   DropdownMenu,
@@ -12,8 +11,9 @@ import type { Url } from "@prisma/client"
 import type { Row } from "@tanstack/react-table"
 import { MoreHorizontal } from "lucide-react"
 import { useState } from "react"
+import { ConfirmDeleteDialog } from "./confirm-delete-dialog"
 
-const ActionsCell = ({ row }: { row: Row<Url> }) => {
+export const ActionsCell = ({ row }: { row: Row<Url> }) => {
   const [isOpen, setIsOpen] = useState(false)
   const url = row.original
 
@@ -41,5 +41,3 @@ const ActionsCell = ({ row }: { row: Row<Url> }) => {
     </>
   )
 }
-
-export default ActionsCell

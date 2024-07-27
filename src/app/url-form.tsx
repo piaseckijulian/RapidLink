@@ -8,11 +8,17 @@ import copy from "clipboard-copy"
 import { Check, Copy } from "lucide-react"
 import { useState } from "react"
 import { type SubmitHandler, useForm } from "react-hook-form"
-import { Form, FormControl, FormField, FormItem, FormMessage } from "./ui/form"
-import { Input } from "./ui/input"
-import { LoadingButton } from "./ui/loading-button"
+import {
+  Form,
+  FormControl,
+  FormField,
+  FormItem,
+  FormMessage,
+} from "../components/ui/form"
+import { Input } from "../components/ui/input"
+import { LoadingButton } from "../components/ui/loading-button"
 
-const CreateUrlForm = () => {
+export const UrlForm = () => {
   const form = useForm<UrlSchema>({
     resolver: zodResolver(urlSchema),
     defaultValues: { fullUrl: "" },
@@ -108,5 +114,3 @@ const CreateUrlForm = () => {
     </Form>
   )
 }
-
-export default CreateUrlForm

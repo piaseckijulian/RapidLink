@@ -18,7 +18,7 @@ type Props = {
   id: string
 }
 
-const ConfirmDeleteDialog = ({ isOpen, setIsOpen, id }: Props) => {
+export const ConfirmDeleteDialog = ({ isOpen, setIsOpen, id }: Props) => {
   return (
     <AlertDialog open={isOpen} onOpenChange={setIsOpen}>
       <AlertDialogContent>
@@ -44,5 +44,3 @@ const ConfirmDeleteDialog = ({ isOpen, setIsOpen, id }: Props) => {
     </AlertDialog>
   )
 }
-
-export default ConfirmDeleteDialog

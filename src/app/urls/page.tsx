@@ -1,7 +1,7 @@
-import UrlTable from "@/components/UrlTable"
 import { getUserUrls } from "@/lib/actions"
 import { currentUser } from "@clerk/nextjs/server"
 import { redirect } from "next/navigation"
+import { UrlTable } from "./url-table"
 
 const UrlsPage = async () => {
   const user = await currentUser()

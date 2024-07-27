@@ -1,4 +1,4 @@
-import CreateUrlForm from "@/components/CreateUrlForm"
+import { UrlForm } from "./url-form"
 
 const HomePage = () => {
   return (
@@ -7,7 +7,7 @@ const HomePage = () => {
         Shorten URLs <span className="text-primary">rapidly.</span>
       </h1>
 
-      <CreateUrlForm />
+      <UrlForm />
     </>
   )
 }
