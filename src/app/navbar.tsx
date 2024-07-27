@@ -1,7 +1,7 @@
+import { Button, buttonVariants } from "@/components/ui/button"
 import { SignInButton, SignedIn, SignedOut, UserButton } from "@clerk/nextjs"
 import { Link as LinkIcon } from "lucide-react"
 import Link from "next/link"
-import { Button, buttonVariants } from "../components/ui/button"
 
 export const Navbar = () => {
   return (
