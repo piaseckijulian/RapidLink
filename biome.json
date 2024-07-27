@@ -3,11 +3,11 @@
   "formatter": {
     "enabled": true,
     "indentStyle": "space",
-    "ignore": [".next"]
+    "ignore": [".next", "next-env.d.ts"]
   },
   "organizeImports": {
     "enabled": true,
-    "ignore": [".next"]
+    "ignore": [".next", "next-env.d.ts"]
   },
   "linter": {
     "enabled": true,
@@ -17,7 +17,7 @@
         "useSortedClasses": "error"
       }
     },
-    "ignore": [".next"]
+    "ignore": [".next", "next-env.d.ts"]
   },
   "javascript": {
     "formatter": {
