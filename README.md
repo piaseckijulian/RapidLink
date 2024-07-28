@@ -29,6 +29,7 @@ RapidLink swiftly shortens long URLs for convenient sharing. 🚀
 ```bash
 git clone https://github.com/piaseckijulian/RapidLink.git
 cd RapidLink
+docker run --name rapidlink-db -e POSTGRES_PASSWORD=password -p 5432:5432 -d postgres
 pnpm dev
 ```
 
