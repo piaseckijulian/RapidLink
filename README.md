@@ -23,7 +23,6 @@ RapidLink swiftly shortens long URLs for convenient sharing. 🚀
 - React Hook Form
 - Zod
 - NanoID
-- Clipboard Copy
 
 ## ✨ Usage
 

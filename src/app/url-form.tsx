@@ -10,10 +10,10 @@ import {
 import { Input } from "@/components/ui/input"
 import { LoadingButton } from "@/components/ui/loading-button"
 import { createUrl } from "@/lib/actions"
+import { useCopyToClipboard } from "@/lib/hooks/copyToClipboard"
 import { type UrlSchema, urlSchema } from "@/lib/validation"
 import { useAuth } from "@clerk/nextjs"
 import { zodResolver } from "@hookform/resolvers/zod"
-import copy from "clipboard-copy"
 import { Check, Copy } from "lucide-react"
 import { useState } from "react"
 import { type SubmitHandler, useForm } from "react-hook-form"
@@ -24,13 +24,11 @@ export const UrlForm = () => {
     defaultValues: { fullUrl: "" },
   })
   const { userId } = useAuth()
+  const { copy, copiedText } = useCopyToClipboard()
   const [shortUrl, setShortUrl] = useState("")
-  const [isCopied, setIsCopied] = useState(false)
 
   const onSubmit: SubmitHandler<UrlSchema> = async (data) => {
     try {
-      setIsCopied(false)
-
       const url = await createUrl(data.fullUrl, userId)
 
       if (!url) {
@@ -42,15 +40,6 @@ export const UrlForm = () => {
       }
 
       setShortUrl(`${process.env.NEXT_PUBLIC_SITE_URL}/${url.shortUrl}`)
-    } catch (error) {
-      console.error(error)
-    }
-  }
-
-  const copyUrl = async () => {
-    try {
-      await copy(shortUrl)
-      setIsCopied(true)
     } catch (error) {
       console.error(error)
     }
@@ -80,15 +69,15 @@ export const UrlForm = () => {
 
           <div className="relative w-full">
             {shortUrl &&
-              (isCopied ? (
+              (copiedText === shortUrl ? (
                 <Check
                   className="-translate-y-1/2 absolute top-1/2 right-3 z-10 transform cursor-pointer text-gray-900"
-                  onClick={copyUrl}
+                  onClick={() => copy(shortUrl)}
                 />
               ) : (
                 <Copy
                   className="-translate-y-1/2 absolute top-1/2 right-3 z-10 transform cursor-pointer text-gray-900"
-                  onClick={copyUrl}
+                  onClick={() => copy(shortUrl)}
                 />
               ))}
 
