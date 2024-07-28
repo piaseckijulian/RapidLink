@@ -24,27 +24,26 @@ export const UrlForm = () => {
     defaultValues: { fullUrl: "" },
   })
   const { userId } = useAuth()
-  const [creatingUrlProgress, setCreatingUrlProgress] = useState(false)
   const [shortUrl, setShortUrl] = useState("")
   const [isCopied, setIsCopied] = useState(false)
 
   const onSubmit: SubmitHandler<UrlSchema> = async (data) => {
     try {
       setIsCopied(false)
-      setCreatingUrlProgress(true)
 
       const url = await createUrl(data.fullUrl, userId)
 
       if (!url) {
-        console.error("Failed to create a URL!")
+        form.setError("fullUrl", {
+          message: "Failed to create a URL",
+        })
+
         return
       }
 
       setShortUrl(`${process.env.NEXT_PUBLIC_SITE_URL}/${url.shortUrl}`)
     } catch (error) {
       console.error(error)
-    } finally {
-      setCreatingUrlProgress(false)
     }
   }
 
@@ -103,10 +102,9 @@ export const UrlForm = () => {
         </div>
 
         <LoadingButton
-          loading={form.formState.isSubmitting}
-          disabled={creatingUrlProgress}
           type="submit"
           className="w-full"
+          loading={form.formState.isSubmitting}
         >
           Get URL
         </LoadingButton>
