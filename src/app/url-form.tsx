@@ -9,7 +9,7 @@ import {
 } from "@/components/ui/form"
 import { Input } from "@/components/ui/input"
 import { LoadingButton } from "@/components/ui/loading-button"
-import { createUrl } from "@/lib/actions"
+import { createUrl } from "@/lib/actions/url.action"
 import { useCopyToClipboard } from "@/lib/hooks/copyToClipboard"
 import { type UrlSchema, urlSchema } from "@/lib/validation"
 import { useAuth } from "@clerk/nextjs"

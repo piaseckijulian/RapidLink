@@ -1,4 +1,4 @@
-import { getUserUrls } from "@/lib/actions"
+import { getUserUrls } from "@/lib/actions/url.action"
 import { currentUser } from "@clerk/nextjs/server"
 import { redirect } from "next/navigation"
 import { UrlTable } from "./url-table"

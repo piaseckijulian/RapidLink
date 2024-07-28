@@ -10,7 +10,7 @@ import {
   AlertDialogHeader,
   AlertDialogTitle,
 } from "@/components/ui/alert-dialog"
-import { deleteUrl } from "@/lib/actions"
+import { deleteUrl } from "@/lib/actions/url.action"
 
 type Props = {
   isOpen: boolean

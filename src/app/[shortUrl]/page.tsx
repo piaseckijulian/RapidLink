@@ -1,4 +1,4 @@
-import { getShortUrl, onUrlVisit } from "@/lib/actions"
+import { getShortUrl, onUrlVisit } from "@/lib/actions/url.action"
 import { redirect } from "next/navigation"
 
 type Props = {
