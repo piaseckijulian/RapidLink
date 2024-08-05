@@ -34,7 +34,7 @@ docker run --name rapidlink-db -e POSTGRES_PASSWORD=password -p 5432:5432 -d pos
 pnpm dev
 ```
 
-Next, duplicate the `!.env.example` file, rename the duplicate to `.env`, and then input your environmental variables there.
+Next, duplicate the `.env.example` file, rename the duplicate to `.env`, and then input your environmental variables there.
 
 ```bash
 pnpm db:push
