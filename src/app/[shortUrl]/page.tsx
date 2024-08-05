@@ -9,11 +9,7 @@ const ShortRedirect = async ({ params: { shortUrl } }: Props) => {
   const url = await getShortUrl(shortUrl)
   if (!url) redirect("/")
 
-  await onUrlVisit({
-    id: url.id,
-    visitCount: url.visitCount + 1,
-    lastVisitedAt: new Date(),
-  })
+  await onUrlVisit(url.id, url.visitCount + 1)
 
   redirect(url.fullUrl)
 }

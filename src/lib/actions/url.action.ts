@@ -51,21 +51,11 @@ export const deleteUrl = async (id: string) => {
   }
 }
 
-type OnUrlVisitParams = {
-  id: string
-  visitCount: number
-  lastVisitedAt: Date
-}
-
-export const onUrlVisit = async ({
-  id,
-  lastVisitedAt,
-  visitCount,
-}: OnUrlVisitParams) => {
+export const onUrlVisit = async (id: string, visitCount: number) => {
   try {
     return await db.url.update({
       where: { id },
-      data: { visitCount, lastVisitedAt },
+      data: { visitCount },
     })
   } catch (error) {
     console.error(error)
