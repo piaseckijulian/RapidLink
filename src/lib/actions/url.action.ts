@@ -1,6 +1,7 @@
 "use server"
 
 import db from "@/lib/db"
+import { currentUser } from "@clerk/nextjs/server"
 import { nanoid } from "nanoid"
 import { revalidatePath } from "next/cache"
 
@@ -8,6 +9,14 @@ export const createUrl = async (
   fullUrl: string,
   userId: string | null = null,
 ) => {
+  if (userId) {
+    const user = await currentUser()
+
+    if (userId !== user?.id) {
+      throw new Error("Unauthorized")
+    }
+  }
+
   try {
     const shortUrl = nanoid(6)
     const url = await db.url.create({ data: { fullUrl, shortUrl, userId } })
@@ -29,6 +38,14 @@ export const getShortUrl = async (shortUrl: string) => {
 }
 
 export const getUserUrls = async (userId: string) => {
+  if (userId) {
+    const user = await currentUser()
+
+    if (userId !== user?.id) {
+      throw new Error("Unauthorized")
+    }
+  }
+
   try {
     return await db.url.findMany({
       where: { userId },
@@ -40,6 +57,10 @@ export const getUserUrls = async (userId: string) => {
 }
 
 export const deleteUrl = async (id: string) => {
+  const user = await currentUser()
+
+  if (!user) throw new Error("Unauthorized")
+
   try {
     const url = await db.url.delete({ where: { id } })
 
