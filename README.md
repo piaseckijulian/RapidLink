@@ -25,22 +25,55 @@ RapidLink swiftly shortens long URLs for convenient sharing. 🚀
 - Zod
 - NanoID
 
-## ✨ Usage
+## ✨ Quick Start
+
+Here’s how to set up the project on your local machine.
+
+**Prerequisites**
+
+Ensure that the following are installed on your machine:
+
+- [Git](https://git-scm.com)
+- [Docker](https://docker.com)
+- [Node.js](https://nodejs.org/en)
+- [pnpm](https://pnpm.io)
+
+**Cloning the Repository**
 
 ```bash
 git clone https://github.com/piaseckijulian/RapidLink.git
 cd RapidLink
+```
+
+**Installation**
+
+```bash
+pnpm i
+```
+
+**Create Local Database**
+
+```bash
 docker run --name rapidlink-db -e POSTGRES_PASSWORD=password -p 5432:5432 -d postgres
+```
+
+**Set Up Environment Variables**
+
+Duplicate the `.env.example` file and rename it to `.env`. Insert your environmental variables there.
+
+`NEXT_PUBLIC_SITE_URL` is the URL of your website. For local development, you can set it to `http://localhost:3000`.
+
+You can obtain both the `CLERK_SECRET_KEY` and `NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY` from [Clerk's website](https://clerk.com).
+
+Set `DATABASE_URL` to the URL of your database. For local development, you can set it to `postgresql://postgres:password@localhost:5432/postgres`.
+
+**Running the Project**
+
+```bash
 pnpm dev
 ```
 
-Next, duplicate the `.env.example` file, rename the duplicate to `.env`, and then input your environmental variables there.
-
-```bash
-pnpm db:push
-```
-
-That's it! - You're good to go. You can add new features, fix bugs etc.
+That's it! - You're good to go. The projest should be live on http://localhost:3000
 
 ## 🌐 License
 
