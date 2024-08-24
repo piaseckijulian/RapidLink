@@ -67,6 +67,12 @@ You can obtain both the `CLERK_SECRET_KEY` and `NEXT_PUBLIC_CLERK_PUBLISHABLE_KE
 
 Set `DATABASE_URL` to the URL of your database. For local development, you can set it to `postgresql://postgres:password@localhost:5432/postgres`.
 
+After setting the `DATABASE_URL`, you should apply the schema by running the following command.
+
+```bash
+pnpm db:push
+```
+
 **Running the Project**
 
 ```bash
