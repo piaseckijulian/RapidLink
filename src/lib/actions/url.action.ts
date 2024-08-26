@@ -34,7 +34,7 @@ export const createUrl = async (
 export const getShortUrl = async (shortUrl: string) => {
   try {
     return await db.query.urls.findFirst({
-      where: (urls, { eq }) => eq(urls.shortUrl, shortUrl),
+      where: eq(urls.shortUrl, shortUrl),
     })
   } catch (error) {
     console.error(error)
