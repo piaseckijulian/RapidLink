@@ -19,7 +19,7 @@ RapidLink swiftly shortens long URLs for convenient sharing. 🚀
 - Tailwind CSS
 - shadcn/ui
 - TanStack React Table
-- Prisma
+- Drizzle ORM
 - Clerk
 - React Hook Form
 - Zod

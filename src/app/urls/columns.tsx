@@ -1,9 +1,9 @@
-import type { Url } from "@prisma/client"
+import type { SelectUrl } from "@/db/schema"
 import type { ColumnDef } from "@tanstack/react-table"
 import Link from "next/link"
 import { ActionsCell } from "./actions-cell"
 
-export const columns: ColumnDef<Url>[] = [
+export const columns: ColumnDef<SelectUrl>[] = [
   {
     accessorKey: "fullUrl",
     header: "Full URL",

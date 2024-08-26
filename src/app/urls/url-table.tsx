@@ -1,11 +1,11 @@
 "use client"
 
 import { DataTable } from "@/components/ui/data-table"
-import type { Url } from "@prisma/client"
+import type { SelectUrl } from "@/db/schema"
 import { columns } from "./columns"
 
 type Props = {
-  urls: Url[] | undefined
+  urls: SelectUrl[] | undefined
 }
 
 export const UrlTable = ({ urls }: Props) => {

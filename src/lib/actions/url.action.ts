@@ -1,7 +1,9 @@
 "use server"
 
-import db from "@/lib/db"
+import { db } from "@/db"
+import { urls } from "@/db/schema"
 import { currentUser } from "@clerk/nextjs/server"
+import { desc, eq } from "drizzle-orm"
 import { nanoid } from "nanoid"
 import { revalidatePath } from "next/cache"
 
@@ -19,11 +21,11 @@ export const createUrl = async (
 
   try {
     const shortUrl = nanoid(6)
-    const url = await db.url.create({ data: { fullUrl, shortUrl, userId } })
+    await db.insert(urls).values({ fullUrl, shortUrl, userId })
 
     revalidatePath("/urls")
 
-    return url
+    return { shortUrl }
   } catch (error) {
     console.error(error)
   }
@@ -31,7 +33,9 @@ export const createUrl = async (
 
 export const getShortUrl = async (shortUrl: string) => {
   try {
-    return await db.url.findUnique({ where: { shortUrl } })
+    return await db.query.urls.findFirst({
+      where: (urls, { eq }) => eq(urls.shortUrl, shortUrl),
+    })
   } catch (error) {
     console.error(error)
   }
@@ -47,37 +51,33 @@ export const getUserUrls = async (userId: string) => {
   }
 
   try {
-    return await db.url.findMany({
-      where: { userId },
-      orderBy: { createdAt: "desc" },
-    })
+    return await db
+      .select()
+      .from(urls)
+      .where(eq(urls.userId, userId))
+      .orderBy(desc(urls.createdAt))
   } catch (error) {
     console.error(error)
   }
 }
 
-export const deleteUrl = async (id: string) => {
+export const deleteUrl = async (id: number) => {
   const user = await currentUser()
 
   if (!user) throw new Error("Unauthorized")
 
   try {
-    const url = await db.url.delete({ where: { id } })
+    await db.delete(urls).where(eq(urls.id, id))
 
     revalidatePath("/urls")
-
-    return url
   } catch (error) {
     console.error(error)
   }
 }
 
-export const onUrlVisit = async (id: string, visitCount: number) => {
+export const onUrlVisit = async (id: number, visitCount: number) => {
   try {
-    return await db.url.update({
-      where: { id },
-      data: { visitCount },
-    })
+    await db.update(urls).set({ visitCount }).where(eq(urls.id, id))
   } catch (error) {
     console.error(error)
   }

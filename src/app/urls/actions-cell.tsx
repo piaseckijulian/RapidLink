@@ -7,13 +7,13 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu"
-import type { Url } from "@prisma/client"
+import type { SelectUrl } from "@/db/schema"
 import type { Row } from "@tanstack/react-table"
 import { MoreHorizontal } from "lucide-react"
 import { useState } from "react"
 import { ConfirmDeleteDialog } from "./confirm-delete-dialog"
 
-export const ActionsCell = ({ row }: { row: Row<Url> }) => {
+export const ActionsCell = ({ row }: { row: Row<SelectUrl> }) => {
   const [isOpen, setIsOpen] = useState(false)
   const url = row.original
 

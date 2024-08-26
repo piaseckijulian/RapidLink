@@ -15,7 +15,7 @@ import { deleteUrl } from "@/lib/actions/url.action"
 type Props = {
   isOpen: boolean
   setIsOpen: (isOpen: boolean) => void
-  id: string
+  id: number
 }
 
 export const ConfirmDeleteDialog = ({ isOpen, setIsOpen, id }: Props) => {
