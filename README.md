@@ -59,13 +59,13 @@ docker run --name rapidlink-db -e POSTGRES_PASSWORD=password -p 5432:5432 -d pos
 
 **Set Up Environment Variables**
 
-Duplicate the `.env.example` file and rename it to `.env`. Insert your environmental variables there.
+Duplicate the `.env.example` file and rename it to `.env`
 
-`NEXT_PUBLIC_SITE_URL` is the URL of your website. For local development, you can set it to `http://localhost:3000`.
+`NEXT_PUBLIC_SITE_URL` is the URL of your website. For local development, you can set it to `http://localhost:3000`
 
-You can obtain both the `CLERK_SECRET_KEY` and `NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY` from [Clerk's website](https://clerk.com).
+You can obtain both the `CLERK_SECRET_KEY` and `NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY` from [Clerk's website](https://clerk.com)
 
-Set `DATABASE_URL` to the URL of your database. For local development, you can set it to `postgresql://postgres:password@localhost:5432/postgres`.
+Set `DATABASE_URL` to the URL of your database. For local development, you can set it to `postgresql://postgres:password@localhost:5432/postgres`
 
 After setting the `DATABASE_URL`, you should apply the schema by running the following command.
 
