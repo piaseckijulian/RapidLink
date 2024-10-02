@@ -1,13 +1,16 @@
 {
-  "$schema": "https://biomejs.dev/schemas/1.8.3/schema.json",
+  "$schema": "https://biomejs.dev/schemas/1.9.3/schema.json",
+  "vcs": {
+    "enabled": true,
+    "clientKind": "git",
+    "useIgnoreFile": true
+  },
   "formatter": {
     "enabled": true,
-    "indentStyle": "space",
-    "ignore": [".next", "next-env.d.ts"]
+    "indentStyle": "space"
   },
   "organizeImports": {
-    "enabled": true,
-    "ignore": [".next", "next-env.d.ts"]
+    "enabled": true
   },
   "linter": {
     "enabled": true,
@@ -16,8 +19,7 @@
       "nursery": {
         "useSortedClasses": "error"
       }
-    },
-    "ignore": [".next", "next-env.d.ts"]
+    }
   },
   "javascript": {
     "formatter": {
