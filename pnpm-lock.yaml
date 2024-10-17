@@ -77,13 +77,13 @@ importers:
         version: 1.9.3
       '@commitlint/cli':
         specifier: ^19.2.2
-        version: 19.5.0(@types/node@20.16.11)(typescript@5.6.3)
+        version: 19.5.0(@types/node@20.16.12)(typescript@5.6.3)
       '@commitlint/config-conventional':
         specifier: ^19.2.2
         version: 19.5.0
       '@types/node':
         specifier: ^20.12.7
-        version: 20.16.11
+        version: 20.16.12
       '@types/react':
         specifier: ^18.2.79
         version: 18.3.11
@@ -1014,8 +1014,8 @@ packages:
   '@types/conventional-commits-parser@5.0.0':
     resolution: {integrity: sha512-loB369iXNmAZglwWATL+WRe+CRMmmBPtpolYzIebFaX4YA3x+BEfLqhUAV9WanycKI3TG1IMr5bMJDajDKLlUQ==}
 
-  '@types/node@20.16.11':
-    resolution: {integrity: sha512-y+cTCACu92FyA5fgQSAI8A1H429g7aSK2HsO7K4XYUWc4dY5IUz55JSDIYT6/VsOLfGy8vmvQYC2hfb0iF16Uw==}
+  '@types/node@20.16.12':
+    resolution: {integrity: sha512-LfPFB0zOeCeCNQV3i+67rcoVvoN5n0NVuR2vLG0O5ySQMgchuZlC4lgz546ZOJyDtj5KIgOxy+lacOimfqZAIA==}
 
   '@types/pg@8.11.6':
     resolution: {integrity: sha512-/2WmmBXHLsfRqzfHW7BNZ8SbYzE8OSk7i3WjFYvfgRHj7S1xj+16Je5fUKv3lVdVzk/zn9TXOqf+avFCFIE0yQ==}
@@ -2282,11 +2282,11 @@ snapshots:
     dependencies:
       csstype: 3.1.1
 
-  '@commitlint/cli@19.5.0(@types/node@20.16.11)(typescript@5.6.3)':
+  '@commitlint/cli@19.5.0(@types/node@20.16.12)(typescript@5.6.3)':
     dependencies:
       '@commitlint/format': 19.5.0
       '@commitlint/lint': 19.5.0
-      '@commitlint/load': 19.5.0(@types/node@20.16.11)(typescript@5.6.3)
+      '@commitlint/load': 19.5.0(@types/node@20.16.12)(typescript@5.6.3)
       '@commitlint/read': 19.5.0
       '@commitlint/types': 19.5.0
       tinyexec: 0.3.0
@@ -2333,7 +2333,7 @@ snapshots:
       '@commitlint/rules': 19.5.0
       '@commitlint/types': 19.5.0
 
-  '@commitlint/load@19.5.0(@types/node@20.16.11)(typescript@5.6.3)':
+  '@commitlint/load@19.5.0(@types/node@20.16.12)(typescript@5.6.3)':
     dependencies:
       '@commitlint/config-validator': 19.5.0
       '@commitlint/execute-rule': 19.5.0
@@ -2341,7 +2341,7 @@ snapshots:
       '@commitlint/types': 19.5.0
       chalk: 5.3.0
       cosmiconfig: 9.0.0(typescript@5.6.3)
-      cosmiconfig-typescript-loader: 5.0.0(@types/node@20.16.11)(cosmiconfig@9.0.0(typescript@5.6.3))(typescript@5.6.3)
+      cosmiconfig-typescript-loader: 5.0.0(@types/node@20.16.12)(cosmiconfig@9.0.0(typescript@5.6.3))(typescript@5.6.3)
       lodash.isplainobject: 4.0.6
       lodash.merge: 4.6.2
       lodash.uniq: 4.5.0
@@ -2934,15 +2934,15 @@ snapshots:
 
   '@types/conventional-commits-parser@5.0.0':
     dependencies:
-      '@types/node': 20.16.11
+      '@types/node': 20.16.12
 
-  '@types/node@20.16.11':
+  '@types/node@20.16.12':
     dependencies:
       undici-types: 6.19.8
 
   '@types/pg@8.11.6':
     dependencies:
-      '@types/node': 20.16.11
+      '@types/node': 20.16.12
       pg-protocol: 1.6.1
       pg-types: 4.0.2
 
@@ -3127,9 +3127,9 @@ snapshots:
 
   cookie@0.7.0: {}
 
-  cosmiconfig-typescript-loader@5.0.0(@types/node@20.16.11)(cosmiconfig@9.0.0(typescript@5.6.3))(typescript@5.6.3):
+  cosmiconfig-typescript-loader@5.0.0(@types/node@20.16.12)(cosmiconfig@9.0.0(typescript@5.6.3))(typescript@5.6.3):
     dependencies:
-      '@types/node': 20.16.11
+      '@types/node': 20.16.12
       cosmiconfig: 9.0.0(typescript@5.6.3)
       jiti: 1.21.6
       typescript: 5.6.3
