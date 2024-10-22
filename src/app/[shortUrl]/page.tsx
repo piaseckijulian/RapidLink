@@ -2,10 +2,12 @@ import { getShortUrl, onUrlVisit } from "@/lib/actions/url.action"
 import { redirect } from "next/navigation"
 
 type Props = {
-  params: { shortUrl: string }
+  params: Promise<{ shortUrl: string }>
 }
 
-const ShortRedirect = async ({ params: { shortUrl } }: Props) => {
+const ShortRedirect = async ({ params }: Props) => {
+  const shortUrl = (await params).shortUrl
+
   const url = await getShortUrl(shortUrl)
   if (!url) redirect("/")
 
