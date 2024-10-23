@@ -1,3 +1,4 @@
+import { ClerkProvider } from "@clerk/nextjs"
 import { UrlForm } from "./url-form"
 
 const HomePage = () => {
@@ -7,7 +8,9 @@ const HomePage = () => {
         Shorten URLs <span className="text-primary">rapidly.</span>
       </h1>
 
-      <UrlForm />
+      <ClerkProvider dynamic>
+        <UrlForm />
+      </ClerkProvider>
     </>
   )
 }
