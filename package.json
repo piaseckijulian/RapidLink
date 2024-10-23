@@ -30,8 +30,8 @@
     "lucide-react": "^0.453.0",
     "nanoid": "^5.0.7",
     "next": "^15.0.0",
-    "react": "19.0.0-rc-45804af1-20241021",
-    "react-dom": "19.0.0-rc-45804af1-20241021",
+    "react": "19.0.0-rc-fb9a90fa48-20240614",
+    "react-dom": "19.0.0-rc-fb9a90fa48-20240614",
     "react-hook-form": "^7.51.3",
     "tailwind-merge": "^2.2.2",
     "zod": "^3.22.4"
