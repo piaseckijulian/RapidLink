@@ -13,7 +13,7 @@ importers:
         version: 6.3.0(next@15.0.3(react-dom@19.0.0-rc-fb9a90fa48-20240614(react@19.0.0-rc-fb9a90fa48-20240614))(react@19.0.0-rc-fb9a90fa48-20240614))(react-dom@19.0.0-rc-fb9a90fa48-20240614(react@19.0.0-rc-fb9a90fa48-20240614))(react@19.0.0-rc-fb9a90fa48-20240614)
       '@hookform/resolvers':
         specifier: ^3.3.4
-        version: 3.9.1(react-hook-form@7.53.1(react@19.0.0-rc-fb9a90fa48-20240614))
+        version: 3.9.1(react-hook-form@7.53.2(react@19.0.0-rc-fb9a90fa48-20240614))
       '@neondatabase/serverless':
         specifier: ^0.10.0
         version: 0.10.3
@@ -64,7 +64,7 @@ importers:
         version: 19.0.0-rc-fb9a90fa48-20240614(react@19.0.0-rc-fb9a90fa48-20240614)
       react-hook-form:
         specifier: ^7.51.3
-        version: 7.53.1(react@19.0.0-rc-fb9a90fa48-20240614)
+        version: 7.53.2(react@19.0.0-rc-fb9a90fa48-20240614)
       tailwind-merge:
         specifier: ^2.2.2
         version: 2.5.4
@@ -2018,8 +2018,8 @@ packages:
     peerDependencies:
       react: 19.0.0-rc-fb9a90fa48-20240614
 
-  react-hook-form@7.53.1:
-    resolution: {integrity: sha512-6aiQeBda4zjcuaugWvim9WsGqisoUk+etmFEsSUMm451/Ic8L/UAb7sRtMj3V+Hdzm6mMjU1VhiSzYUZeBm0Vg==}
+  react-hook-form@7.53.2:
+    resolution: {integrity: sha512-YVel6fW5sOeedd1524pltpHX+jgU2u3DSDtXEaBORNdqiNrsX/nUI/iGXONegttg0mJVnfrIkiV0cmTU6Oo2xw==}
     engines: {node: '>=18.0.0'}
     peerDependencies:
       react: ^16.8.0 || ^17 || ^18 || ^19
@@ -2712,9 +2712,9 @@ snapshots:
 
   '@floating-ui/utils@0.2.8': {}
 
-  '@hookform/resolvers@3.9.1(react-hook-form@7.53.1(react@19.0.0-rc-fb9a90fa48-20240614))':
+  '@hookform/resolvers@3.9.1(react-hook-form@7.53.2(react@19.0.0-rc-fb9a90fa48-20240614))':
     dependencies:
-      react-hook-form: 7.53.1(react@19.0.0-rc-fb9a90fa48-20240614)
+      react-hook-form: 7.53.2(react@19.0.0-rc-fb9a90fa48-20240614)
 
   '@img/sharp-darwin-arm64@0.33.5':
     optionalDependencies:
@@ -3921,7 +3921,7 @@ snapshots:
       react: 19.0.0-rc-fb9a90fa48-20240614
       scheduler: 0.25.0-rc-fb9a90fa48-20240614
 
-  react-hook-form@7.53.1(react@19.0.0-rc-fb9a90fa48-20240614):
+  react-hook-form@7.53.2(react@19.0.0-rc-fb9a90fa48-20240614):
     dependencies:
       react: 19.0.0-rc-fb9a90fa48-20240614
 
