@@ -101,7 +101,7 @@ importers:
         version: 0.28.1
       husky:
         specifier: ^9.0.11
-        version: 9.1.6
+        version: 9.1.7
       postcss:
         specifier: ^8.4.38
         version: 8.4.49
@@ -1654,8 +1654,8 @@ packages:
     resolution: {integrity: sha512-0hJU9SCPvmMzIBdZFqNPXWa6dqh7WdH0cII9y+CyS8rG3nL48Bclra9HmKhVVUHyPWNH5Y7xDwAB7bfgSjkUMQ==}
     engines: {node: '>= 0.4'}
 
-  husky@9.1.6:
-    resolution: {integrity: sha512-sqbjZKK7kf44hfdE94EoX8MZNk0n7HeW37O4YrVGCF4wzgQjp+akPAkfUK5LZ6KuR/6sqeAVuXHji+RzQgOn5A==}
+  husky@9.1.7:
+    resolution: {integrity: sha512-5gs5ytaNjBrh5Ow3zrvdUUY+0VxIuWVL4i9irt6friV+BqdCfmV11CQTWMiBYWHbXhco+J1kHfTOUkePhCDvMA==}
     engines: {node: '>=18'}
     hasBin: true
 
@@ -3623,7 +3623,7 @@ snapshots:
     dependencies:
       function-bind: 1.1.2
 
-  husky@9.1.6: {}
+  husky@9.1.7: {}
 
   import-fresh@3.3.0:
     dependencies:
